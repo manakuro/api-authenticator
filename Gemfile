@@ -29,6 +29,7 @@ gem 'rack-cors'
 # authentication based on token
 gem 'devise'
 gem 'devise_token_auth'
+gem 'omniauth'
 
 
 group :development, :test do
