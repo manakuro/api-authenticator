@@ -1,4 +1,4 @@
-class V1::Auth::RegistrationsController < DeviseTokenAuth::RegistrationsController
+class V1::User::RegistrationsController < DeviseTokenAuth::RegistrationsController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
