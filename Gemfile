@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -32,11 +34,11 @@ gem 'devise_token_auth'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
-gem 'dotenv-rails'
+gem 'dotenv-rails', groups: %i[development test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry-rails'
@@ -57,6 +59,5 @@ group :test do
   gem 'rspec-rails', '~> 3.5'
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
