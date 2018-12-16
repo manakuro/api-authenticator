@@ -1,4 +1,4 @@
-class V1::User::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacksController
+class V1::Auth::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacksController
   include Devise::Controllers::Rememberable
 
   def omniauth_success
