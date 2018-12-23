@@ -2,8 +2,8 @@ class V1::Auth::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacks
   include Devise::Controllers::Rememberable
 
   def omniauth_success
-    super do
-      render json: {}, status: :ok and return
+    super do |resource|
+      render json: resource.as_json and return
     end
   end
 end
