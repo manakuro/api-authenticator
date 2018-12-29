@@ -3,7 +3,8 @@ class V1::Auth::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacks
 
   def omniauth_success
     super do |resource|
-      render json: resource.as_json and return
+      user = User.find(resource.id)
+      render json: user and return
     end
   end
 end

@@ -32,10 +32,12 @@ gem 'rack-cors'
 gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
-gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
 
 gem 'dotenv-rails', groups: %i[development test]
+
+gem 'active_model_serializers'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
