@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  mount_devise_token_auth_for User.name, at: 'v1/auth', controllers: {
+    registrations: 'v1/auth/registrations',
+    omniauth_callbacks: 'v1/auth/omniauth_callbacks'
+  }
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
 end

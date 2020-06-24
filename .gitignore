@@ -24,3 +24,5 @@
 vendor/
 .idea
 *.iml
+railways.cache
+*.local
